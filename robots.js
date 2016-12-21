@@ -10,159 +10,187 @@
 // Give each robot model a different range of damage they do using the same technique.
 
 
-
-
 var Battledome = Battledome || {};
 Battledome.RobotGuild = {};
 
 /*
-  Base function for a robot
+  Base function for a robsot
  */
 
 Battledome.RobotGuild.BotClass = function() {
-  this.name = "Beggar";
-  this.healthBonus = 0;
-  this.strengthBonus = 0;
-  this.intelligenceBonus = 0;
-
-  this.toString = function() {
-    return this.name;
-  }
+    this.type = null;
+    this.class = null;
+    this.healthBonus = null;
+    this.strengthBonus = null;
 };
 
 
+
 /*
-    Drone CLASSES
-      - GlobalHawk
-      - Neuron
-      - Barracuda
-      - Hummingbird
+       #       # ######  ######  ####### #     # #######
+      #       #  #     # #     # #     # ##    # #
+     #       #   #     # #     # #     # # #   # #
+    #       #    #     # ######  #     # #  #  # #####
+   #       #     #     # #   #   #     # #   # # #
+  #       #      #     # #    #  #     # #    ## #
+ #       #       ######  #     # ####### #     # #######
  */
 
+
 Battledome.RobotGuild.Drone = function() {
+  this.name = "Drone";
   this.healthBonus = 20;
   this.strengthBonus = 10;
+  this.base = "Aerial";
 };
 Battledome.RobotGuild.Drone.prototype = new Battledome.RobotGuild.BotClass();
 
 
-Battledome.RobotGuild.GlobalHawk = function() {
+// ------------------TYPES------------------------
+
+Battledome.RobotGuild.GlobalHawk = function(name) {
   this.name = "GlobalHawk";
   this.healthBonus = this.healthBonus + 25;
   this.strengthBonus = this.strengthBonus + 30;
+  this.playerName = name;
 };
 Battledome.RobotGuild.GlobalHawk.prototype = new Battledome.RobotGuild.Drone();
 
 
-Battledome.RobotGuild.Neuron = function() {
+Battledome.RobotGuild.Neuron = function(name) {
   this.name = "Neuron";
   this.healthBonus = this.healthBonus + 20;
   this.strengthBonus = this.strengthBonus + 10;
+  this.playerName = name;
+
 };
 Battledome.RobotGuild.Neuron.prototype = new Battledome.RobotGuild.Drone();
 
-
-Battledome.RobotGuild.Barracuda = function() {
-  this.name = "Barracuda";
-  this.healthBonus = this.healthBonus + 35;
-  this.strengthBonus = this.strengthBonus + 20;
-};
-Battledome.RobotGuild.Barracuda.prototype = new Battledome.RobotGuild.Drone();
-
-
-Battledome.RobotGuild.Hummingbird = function() {
+Battledome.RobotGuild.Hummingbird = function(name) {
   this.name = "Hummingbird";
   this.healthBonus = this.healthBonus + 10;
   this.strengthBonus = this.strengthBonus + 40;
+  this.playerName = name;
+
 };
 Battledome.RobotGuild.Hummingbird.prototype = new Battledome.RobotGuild.Drone();
 
-
 /*
-    Bipedal CLASSES
-      - Watson
-      - Brutus
-      - Flash
- */
+       #       # ######  ### ######  ####### #######    #    #
+      #       #  #     #  #  #     # #          #      # #   #
+     #       #   #     #  #  #     # #          #     #   #  #
+    #       #    ######   #  ######  #####      #    #     # #
+   #       #     #     #  #  #       #          #    ####### #
+  #       #      #     #  #  #       #          #    #     # #
+ #       #       ######  ### #       #######    #    #     # #######
+*/
+
 Battledome.RobotGuild.Bipedal = function() {
   this.name = "Bipedal";
-  this.magical = true;
   this.healthBonus = this.healthBonus - 10;
   this.strengthBonus = this.strengthBonus - 20;
-  this.intelligenceBonus = this.intelligenceBonus + 20;
+  this.base = "Ground";
 };
 Battledome.RobotGuild.Bipedal.prototype = new Battledome.RobotGuild.BotClass();
 
 
-Battledome.RobotGuild.Watson = function() {
+// ------------------TYPES-----------------------
+
+
+Battledome.RobotGuild.Watson = function(name) {
   this.name = "Watson";
   this.healthBonus = this.healthBonus + 5;
-  this.strengthBonus = this.strengthBonus - 10;
-  this.intelligenceBonus = this.intelligenceBonus + 20;
+  this.intelligenceBonus = this.intelligenceBonus + 30;
+  this.playerName = name;
+
 };
 Battledome.RobotGuild.Watson.prototype = new Battledome.RobotGuild.Bipedal();
 
-Battledome.RobotGuild.Brutus = function() {
+Battledome.RobotGuild.Brutus = function(name) {
   this.name = "Brutus";
   this.strengthBonus = this.strengthBonus - 10;
   this.intelligenceBonus = this.intelligenceBonus + 10;
+  this.playerName = name;
+
 };
 Battledome.RobotGuild.Brutus.prototype = new Battledome.RobotGuild.Bipedal();
 
 
-Battledome.RobotGuild.Flash = function() {
+Battledome.RobotGuild.Flash = function(name) {
   this.name = "Flash";
   this.healthBonus = this.healthBonus - 5;
   this.strengthBonus = this.strengthBonus - 20;
   this.intelligenceBonus = this.intelligenceBonus + 30;
+  this.playerName = name;
+
 };
 Battledome.RobotGuild.Flash.prototype = new Battledome.RobotGuild.Bipedal();
 
 
 /*
-    ATV CLASSES
-      - DuneBuggy
-      - Ninja
-      - GolfCart
+       #       #    #    ####### #     #
+      #       #    # #      #    #     #
+     #       #    #   #     #    #     #
+    #       #    #     #    #    #     #
+   #       #     #######    #     #   #
+  #       #      #     #    #      # #
+ #       #       #     #    #       #
  */
 
 Battledome.RobotGuild.Atv = function() {
    this.name = "Atv";
-   this.magical = true;
    this.healthBonus = this.healthBonus - 10;
    this.strengthBonus = this.strengthBonus - 20;
-   this.intelligenceBonus = this.intelligenceBonus + 20;
+   this.base = "Wheels";
+
 };
 Battledome.RobotGuild.Atv.prototype = new Battledome.RobotGuild.BotClass();
 
 
-Battledome.RobotGuild.DuneBuggy = function() {
+// ------------------TYPES------------------------
+
+
+Battledome.RobotGuild.DuneBuggy = function(name) {
     this.name = "DuneBuggy";
     this.healthBonus = this.healthBonus - 1;
     this.strengthBonus = this.strengthBonus - 30;
-    this.intelligenceBonus = this.intelligenceBonus + 20;
+    this.playerName = name;
+
 };
 Battledome.RobotGuild.DuneBuggy.prototype = new Battledome.RobotGuild.Atv();
 
-Battledome.RobotGuild.Ninja = function() {
+
+Battledome.RobotGuild.Ninja = function(name) {
     this.name = "Ninja";
     this.healthBonus = this.healthBonus + 10;
     this.strengthBonus = this.strengthBonus - 5;
     this.intelligenceBonus = this.intelligenceBonus + 37;
+    this.playerName = name;
+
 };
 Battledome.RobotGuild.Ninja.prototype = new Battledome.RobotGuild.Atv();
 
-Battledome.RobotGuild.GolfCart = function() {
+Battledome.RobotGuild.GolfCart = function(name) {
     this.name = "GolfCart";
     this.healthBonus = this.healthBonus - 10;
     this.strengthBonus = this.strengthBonus - 5;
     this.intelligenceBonus = this.intelligenceBonus + 5;
+    this.playerName = name;
+
 };
 Battledome.RobotGuild.GolfCart.prototype = new Battledome.RobotGuild.Atv();
 
 
+/*
+       #       # ######     #    #     # ######  ####### #     #
+      #       #  #     #   # #   ##    # #     # #     # ##   ##
+     #       #   #     #  #   #  # #   # #     # #     # # # # #
+    #       #    ######  #     # #  #  # #     # #     # #  #  #
+   #       #     #   #   ####### #   # # #     # #     # #     #
+  #       #      #    #  #     # #    ## #     # #     # #     #
+ #       #       #     # #     # #     # ######  ####### #     #
+ */
 
-//RANDOM BOT GENERATOR
 
 var classesArray = ["GlobalHawk", "Barracuda", "Neuron", "Hummingbird", "Flash", "Brutus", "DuneBuggy", "Ninja", "GolfCart"];
 
