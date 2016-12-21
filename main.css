@@ -1,6 +1,11 @@
-.card {
-  display: none;
-  padding: 5%;
+#game-container {
+  padding: 2%;
+  text-align: center;
+  display: block;
+}
+
+#name-robot {
+
 }
 
 .card__prompt {
@@ -8,6 +13,16 @@
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
+}
+
+.title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.field {
+    width: 100%;
 }
 
 .card__button {
@@ -21,10 +36,10 @@
   Button styles
  */
 
-.btn {
+.select-bot {
   text-decoration: none;
-  background-color: white;
-  color: #888;
+  background-color: lightgreen;
+  color: black;
   border-radius: 5px;
   display: inline-block;
   margin: 10px;
@@ -35,13 +50,19 @@
   min-width: 260px;
 }
 
-.btn--orange {
-  /*width: 500px;*/
-  margin-top: 5%;
-  border-color: #FF4136;
-  color: white;
+.button {
+    margin-top: 2%;
+    padding: 2%;
+    text-align: center;
+}
+
+.enter-dome {
   background-color: #FF4136;
+  border: 5px solid firebrick;
+  color: white;
   text-align: center;
+  padding: 1% 5%;
+
 }
 
 .btn--blue {
@@ -84,8 +105,4 @@
   border-radius: 5px 0 0 5px;
   left: 37px;
   float: left;
-}
-
-.btn__text {
-  border-radius: 0 5px 5px 0;
 }

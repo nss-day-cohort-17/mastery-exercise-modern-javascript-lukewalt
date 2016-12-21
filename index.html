@@ -9,136 +9,75 @@
     <body>
         <article id="game-container">
 
-            <section id="name-robot" class="card card--name">
+            <section id="name-robot" class="row">
+
+                <!-- TITLE -->
+                <div class="title col-xs-12">NAME ROBOT</div>
+
                 <!-- player one -->
-                <div class="card__prompt">
-                  <div class="title">Robot One</div>
-                  <div class="field">
-                    <input type="text" autofocus="true" id="player-name" class="field__textinput">
-                  </div>
-                </div>
-                <!-- player two -->
-                <div class="card__prompt">
-                    <div class="title">Robot Two</div>
+                <div id="playerOne" class="col-sm-6">
+                    <div>Robot One</div>
                     <div class="field">
-                        <input type="text" autofocus="true" id="player-name" class="field__textinput">
+                        <input type="text" autofocus="true" id="player-one-name" class="player-name field__textinput">
                     </div>
+                    <select class="p1-select-bot">
+                        <optgroup label="Drone">
+                            <option>GlobalHawk</option>
+                            <option>Neuron</option>
+                            <option>Barracuda</option>
+                            <option>Hummingbird</option>
+                        </optgroup>
+                        <optgroup label="Bipedal">
+                            <option>Watson</option>
+                            <option>Flash</option>
+                            <option>Brutus</option>
+                        </optgroup>
+                        <optgroup label="Atv">
+                            <option>DuneBuggy</option>
+                            <option>Ninja</option>
+                            <option>GolfCart</option>
+                        </optgroup>
+                    </select>
+                    <button type="button" id="player-1-ready">Ready</button>
                 </div>
+
+                <!-- player two -->
+                <div id="playerTwo" class="col-sm-6">
+                    <div>Robot Two</div>
+                    <div class="field">
+                        <input type="text" autofocus="true" id="player-two-name" class="field__textinput">
+                    </div>
+                    <select class="p2-select-bot">
+                        <optgroup label="Drone">
+                            <option class="bot-type">GlobalHawk</option>
+                            <option class="bot-type">Neuron</option>
+                            <option class="bot-type">Barracuda</option>
+                            <option class="bot-type">Hummingbird</option>
+                        </optgroup>
+                        <optgroup label="Bipedal">
+                            <option class="bot-type">Watson</option>
+                            <option class="bot-type">Flash</option>
+                            <option class="bot-type">Brutus</option>
+                        </optgroup>
+                        <optgroup label="Atv">
+                            <option class="bot-type">DuneBuggy</option>
+                            <option class="bot-type">Ninja</option>
+                            <option class="bot-type">GolfCart</option>
+                        </optgroup>
+                    </select>
+                    <button type="button" id="player-2-ready">Ready</button>
+                </div>
+
                 <!-- link-button -->
-                <div class="card__button">
-                    <a class="card__link btn btn--big btn--orange" href="#" next="card--class">
-                    <span class="btn__text">Enter</span>
-                    </a>
+                <div class="col-xs-12">
+                    <button class="enter-dome">Enter Battledome</button>
                 </div>
+
             </section>
-
-            <section id="class-select" class="card card--class">
-                <div class="card__prompt">
-
-                    <div class="title">CHOOSE YOUR PLAYER</div>
-                        <div>
-                          <a class="card__back btn btn--small"
-                            href="#"
-                            previous="card--name">
-                            <span class="btn__prompt">&lt;</span>
-                            <span class="btn__text">Back</span>
-                          </a>
-                        </div>
-                    </div>
-
-                    <div class="container-fluid">
-                        <div class="row">
-
-                            <div class="col-sm-4">
-                              <div class="card__button">
-                                <a class="class__link btn btn--big btn--blue" href="#">
-                                  <span class="btn__prompt">&lt;</span>
-                                  <span class="btn__text">GlobalHawk</span>
-                                </a>
-                              </div>
-                              <div class="card__button">
-                                <a class="class__link btn btn--big btn--blue" href="#">
-                                  <span class="btn__prompt">&lt;</span>
-                                  <span class="btn__text">Neuron</span>
-                                </a>
-                              </div>
-                              <div class="card__button">
-                                <a class="class__link btn btn--big btn--blue" href="#">
-                                  <span class="btn__prompt">&lt;</span>
-                                  <span class="btn__text">Barracuda</span>
-                                </a>
-                              </div>
-                              <div class="card__button">
-                                <a class="class__link btn btn--big btn--blue" href="#">
-                                  <span class="btn__prompt">&lt;</span>
-                                  <span class="btn__text">Hummingbird</span>
-                                </a>
-                              </div>
-                            </div>
-
-                            <div class="col-sm-4">
-                              <div class="card__button">
-                                <a class="class__link btn btn--big btn--blue" href="#">
-                                  <span class="btn__prompt">&lt;</span>
-                                  <span class="btn__text">Watson</span>
-                                </a>
-                              </div>
-                              <div class="card__button">
-                                <a class="class__link btn btn--big btn--blue" href="#">
-                                  <span class="btn__prompt">&lt;</span>
-                                  <span class="btn__text">Flash</span>
-                                </a>
-                              </div>
-                              <div class="card__button">
-                                <a class="class__link btn btn--big btn--blue" href="#">
-                                  <span class="btn__prompt">&lt;</span>
-                                  <span class="btn__text">Brutus</span>
-                                </a>
-                              </div>
-                            </div>
-
-                            <div class="col-sm-4">
-                              <div class="card__button">
-                                <a class="class__link btn btn--big btn--blue" href="#">
-                                  <span class="btn__prompt">&lt;</span>
-                                  <span class="btn__text">DuneBuggy</span>
-                                </a>
-                              </div>
-                              <div class="card__button">
-                                <a class="class__link btn btn--big btn--blue" href="#">
-                                  <span class="btn__prompt">&lt;</span>
-                                  <span class="btn__text">Ninja</span>
-                                </a>
-                              </div>
-                              <div class="card__button">
-                                <a class="class__link btn btn--big btn--blue" href="#">
-                                  <span class="btn__prompt">&lt;</span>
-                                  <span class="btn__text">GolfCart</span>
-                                </a>
-                              </div>
-                              <div class="card__button">
-                                <a class="class__link btn btn--big btn--yellow" href="#">
-                                  <span class="btn__prompt">&lt;</span>
-                                  <span class="btn__text">Random</span>
-                                </a>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card__button">
-                      <a class="card__link btn btn--big btn--orange"
-                        href="#"
-                        next="card--weapon">
-                        <span class="btn__prompt">&lt;</span>
-                        <span class="btn__text">Select Class</span>
-                      </a>
-                    </div>
-                </div>
-            </section>
-
 
         </article>
     </body>
+
     <script type="text/javascript" src="robots.js"></script>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="quiz.js"></script>
