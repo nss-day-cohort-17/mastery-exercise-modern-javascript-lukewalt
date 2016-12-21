@@ -50,8 +50,9 @@ Battledome.RobotGuild.Drone.prototype = new Battledome.RobotGuild.BotClass();
 
 Battledome.RobotGuild.GlobalHawk = function(name) {
   this.name = "GlobalHawk";
-  this.healthBonus += 25;
-  this.strengthBonus += 30;
+  this.healthBonus += 15;
+  this.strengthBonus += 40;
+  this.intelligenceBonus += 25;
   this.playerName = name;
 };
 Battledome.RobotGuild.GlobalHawk.prototype = new Battledome.RobotGuild.Drone();
@@ -61,6 +62,7 @@ Battledome.RobotGuild.Neuron = function(name) {
   this.name = "Neuron";
   this.healthBonus += 20;
   this.strengthBonus += 10;
+  this.speed += 10;
   this.playerName = name;
 
 };
@@ -68,8 +70,9 @@ Battledome.RobotGuild.Neuron.prototype = new Battledome.RobotGuild.Drone();
 
 Battledome.RobotGuild.Hummingbird = function(name) {
   this.name = "Hummingbird";
-  this.healthBonus += 10;
-  this.strengthBonus += 40;
+  this.healthBonus += 30;
+  this.strengthBonus += 10;
+  this.intelligenceBonus += 5;
   this.playerName = name;
 
 };
@@ -200,12 +203,11 @@ Battledome.RobotGuild.GolfCart.prototype = new Battledome.RobotGuild.Atv();
  */
 
 
-var classesArray = ["GlobalHawk", "Barracuda", "Neuron", "Hummingbird", "Flash", "Brutus", "DuneBuggy", "Ninja", "GolfCart"];
+var classesArray = ["GlobalHawk", "Neuron", "Hummingbird", "Flash", "Brutus", "DuneBuggy", "Ninja", "GolfCart"];
 
 Battledome.RobotGuild.Random = function() {
   // Get a random index from the allowed classes array
-  var random = Math.round(Math.random() * (classesArray.length - 1));
-
+  var random = Math.round(Math.random() * (classesArray.length - 2));
   // Get the string at the index
   var randomClass = classesArray[random];
 

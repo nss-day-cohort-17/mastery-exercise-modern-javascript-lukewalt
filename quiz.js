@@ -18,7 +18,6 @@ $("#player-1-ready").click(function(e){
     userName1 = $('#player-one-name').val();
 
     combatant1 = new Battledome.RobotGuild[typeSelect](userName1);
-
     console.log(combatant1);
 })
 
