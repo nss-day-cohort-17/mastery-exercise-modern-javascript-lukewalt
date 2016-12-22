@@ -205,16 +205,14 @@ Battledome.RobotGuild.GolfCart.prototype = new Battledome.RobotGuild.Atv();
 
 var classesArray = ["GlobalHawk", "Neuron", "Hummingbird", "Flash", "Brutus", "DuneBuggy", "Ninja", "GolfCart"];
 
-Battledome.RobotGuild.Random = function() {
+Battledome.RobotGuild.Random = function(name) {
   // Get a random index from the allowed classes array
-  var random = Math.round(Math.random() * (classesArray.length - 2));
+  var random = Math.round(Math.random() * (classesArray.length - 1));
   // Get the string at the index
   var randomClass = classesArray[random];
 
   // Composes the corresponding player class into the player object
-  this.class = new Battledome.RobotGuild[randomClass]();
+  this.class = new Battledome.RobotGuild[randomClass](name);
 
-  // Add the health bonus
-  this.health += this.class.healthBonus;
   return this.class;
 };
