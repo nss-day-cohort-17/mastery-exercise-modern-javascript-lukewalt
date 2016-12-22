@@ -38,8 +38,8 @@ Battledome.RobotGuild.BotClass = function() {
 
 Battledome.RobotGuild.Drone = function() {
   this.name = "Drone";
-  this.healthBonus += 20;
-  this.strengthBonus += 10;
+  this.healthBonus += Math.floor(Math.random() * (50 - 80) + 80);
+  this.strengthBonus += Math.floor(Math.random() * (25 - 27) + 27);
   this.speed += 10;
   this.base = "Aerial";
 };
@@ -51,7 +51,7 @@ Battledome.RobotGuild.Drone.prototype = new Battledome.RobotGuild.BotClass();
 Battledome.RobotGuild.GlobalHawk = function(name) {
   this.name = "GlobalHawk";
   this.healthBonus += 15;
-  this.strengthBonus += 40;
+  this.strengthBonus += 5;
   this.intelligenceBonus += 25;
   this.playerName = name;
 };
@@ -61,7 +61,7 @@ Battledome.RobotGuild.GlobalHawk.prototype = new Battledome.RobotGuild.Drone();
 Battledome.RobotGuild.Neuron = function(name) {
   this.name = "Neuron";
   this.healthBonus += 20;
-  this.strengthBonus += 10;
+  this.strengthBonus += 7;
   this.speed += 10;
   this.playerName = name;
 
@@ -71,7 +71,7 @@ Battledome.RobotGuild.Neuron.prototype = new Battledome.RobotGuild.Drone();
 Battledome.RobotGuild.Hummingbird = function(name) {
   this.name = "Hummingbird";
   this.healthBonus += 30;
-  this.strengthBonus += 10;
+  this.strengthBonus += 5;
   this.intelligenceBonus += 5;
   this.playerName = name;
 
@@ -90,8 +90,8 @@ Battledome.RobotGuild.Hummingbird.prototype = new Battledome.RobotGuild.Drone();
 
 Battledome.RobotGuild.Bipedal = function() {
   this.name = "Bipedal";
-  this.healthBonus -= 10;
-  this.strengthBonus -= 20;
+  this.healthBonus += Math.floor(Math.random() * (60 - 90) + 90);
+  this.strengthBonus += Math.floor(Math.random() * (20 - 25) + 25);
   this.base = "Ground";
 };
 Battledome.RobotGuild.Bipedal.prototype = new Battledome.RobotGuild.BotClass();
@@ -103,7 +103,7 @@ Battledome.RobotGuild.Bipedal.prototype = new Battledome.RobotGuild.BotClass();
 Battledome.RobotGuild.Watson = function(name) {
   this.name = "Watson";
   this.healthBonus += 5;
-  this.strengthBonus -= 20;
+  this.strengthBonus -= 7;
 
   this.intelligenceBonus = 30;
   this.playerName = name;
@@ -113,7 +113,7 @@ Battledome.RobotGuild.Watson.prototype = new Battledome.RobotGuild.Bipedal();
 
 Battledome.RobotGuild.Brutus = function(name) {
   this.name = "Brutus";
-  this.strengthBonus += 50;
+  this.strengthBonus += 10;
   this.speed -= 10;
   this.intelligenceBonus -= 10;
   this.playerName = name;
@@ -125,7 +125,7 @@ Battledome.RobotGuild.Brutus.prototype = new Battledome.RobotGuild.Bipedal();
 Battledome.RobotGuild.Flash = function(name) {
   this.name = "Flash";
   this.healthBonus += 5;
-  this.strengthBonus -= 20;
+  this.strengthBonus -= 5;
   this.speed += 30;
   this.intelligenceBonus += 30;
   this.playerName = name;
@@ -146,8 +146,8 @@ Battledome.RobotGuild.Flash.prototype = new Battledome.RobotGuild.Bipedal();
 
 Battledome.RobotGuild.Atv = function() {
    this.name = "Atv";
-   this.healthBonus -= 10;
-   this.strengthBonus -= 20;
+   this.healthBonus += Math.floor(Math.random() * (70 - 1000) + 100);
+   this.strengthBonus += Math.floor(Math.random() * (10 - 20) + 20);
    this.speed += 5;
    this.base = "Wheels";
 
