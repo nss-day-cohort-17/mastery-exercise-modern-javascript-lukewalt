@@ -14,8 +14,8 @@
                 <!-- TITLE -->
                 <div class="title col-xs-12">NAME ROBOT</div>
 
-                <!-- player one -->
-                <div id="playerOne" class="col-sm-6">
+                <!-- PLAYER 1 -->
+                <div id="playerOne" class="col-sm-6 robot-card">
                     <div>Robot One</div>
                     <div class="field">
                         <input type="text" autofocus="true" id="player-one-name" class="player-name field__textinput">
@@ -41,8 +41,12 @@
                     <button type="button" id="player-1-ready">Ready</button>
                 </div>
 
-                <!-- player two -->
-                <div id="playerTwo" class="col-sm-6">
+                <!-- player one select -->
+                <div class="col-sm-6 robot-card card" style="display: none"></div>
+
+
+                <!-- PLAYER 2 -->
+                <div id="playerTwo" class="col-sm-6 robot-card2">
                     <div>Robot Two</div>
                     <div class="field">
                         <input type="text" autofocus="true" id="player-two-name" class="field__textinput">
@@ -68,18 +72,21 @@
                     <button type="button" id="player-2-ready">Ready</button>
                 </div>
 
-                <!-- link-button -->
+                <!-- player two select -->
+                <div class="col-sm-6 robot-card2 card2" style="display: none"></div>
+
+
+                <!-- LINK BUTTON -->
                 <div class="col-xs-12">
                     <button id="enter-dome">Enter Battledome</button>
                 </div>
 
             </section>
-            <section id="battledome">
+            <section id="battledome" style="display: none">
                 <div class="backdrop">
                     <h2 class="col-xs-12">WAR</h2>
 
                 </div>
-
             </section>
 
         </article>
