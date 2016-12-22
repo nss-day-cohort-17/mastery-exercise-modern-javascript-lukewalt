@@ -22,6 +22,7 @@
                     </div>
                     <select class="p1-select-bot">
                         <optgroup label="Drone">
+                            <option>Random</option>
                             <option>GlobalHawk</option>
                             <option>Neuron</option>
                             <option>Hummingbird</option>
@@ -35,7 +36,6 @@
                             <option>DuneBuggy</option>
                             <option>Ninja</option>
                             <option>GolfCart</option>
-                            <option>Random</option>
                         </optgroup>
                     </select>
                     <button type="button" id="player-1-ready">Ready</button>
@@ -49,9 +49,9 @@
                     </div>
                     <select class="p2-select-bot">
                         <optgroup label="Drone">
+                            <option class="bot-type">Random</option>
                             <option class="bot-type">GlobalHawk</option>
                             <option class="bot-type">Neuron</option>
-                            <option class="bot-type">Barracuda</option>
                             <option class="bot-type">Hummingbird</option>
                         </optgroup>
                         <optgroup label="Bipedal">
@@ -63,7 +63,6 @@
                             <option class="bot-type">DuneBuggy</option>
                             <option class="bot-type">Ninja</option>
                             <option class="bot-type">GolfCart</option>
-                            <option class="bot-type">Random</option>
                         </optgroup>
                     </select>
                     <button type="button" id="player-2-ready">Ready</button>
@@ -71,7 +70,14 @@
 
                 <!-- link-button -->
                 <div class="col-xs-12">
-                    <button class="enter-dome">Enter Battledome</button>
+                    <button id="enter-dome">Enter Battledome</button>
+                </div>
+
+            </section>
+            <section id="battledome">
+                <div class="backdrop">
+                    <h2 class="col-xs-12">WAR</h2>
+
                 </div>
 
             </section>

@@ -11,6 +11,18 @@ var userName2;
 //  You must also provide a select element underneath each text input
 //    so that the user can select one of the 6 robot models you defined.
 
+$('document').ready(function(){
+    $('#name-robot').show();
+
+    $('#enter-dome').click(function(e){
+        $('#name-robot').hide();
+
+        // $('#battledome').show();
+    })
+
+})
+
+
 $("#player-1-ready").click(function(e){
 
     typeSelect = $(".p1-select-bot option:selected").text();
