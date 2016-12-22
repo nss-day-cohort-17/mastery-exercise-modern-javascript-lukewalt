@@ -12,12 +12,18 @@ var userName2;
 //    so that the user can select one of the 6 robot models you defined.
 
 $('document').ready(function(){
+    var moveAlong = false;
+
     $('#name-robot').show();
 
     $('#enter-dome').click(function(e){
-        $('#name-robot').hide();
+        if ($("#player-one-name").val() == "" || $("#player-two-name").val() == "") {
+            alert("Must enter name for Robot")
+        } else {
+            $('#name-robot').hide('slow');
 
-        // $('#battledome').show();
+        }
+
     })
 
 })
