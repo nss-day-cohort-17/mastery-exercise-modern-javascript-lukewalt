@@ -19,20 +19,6 @@
 
 }
 
-#battledome {
-    background-color: red;
-    min-height: 700px;
-    margin: 1%;
-    padding: 3%;
-
-}
-
-#attackButton {
-    height: 100px;
-    width: 100px;
-    border-radius: 75%;
-}
-
 .card__prompt {
   font-size: 1.1em;
   font-weigh: ;t: bold;
@@ -132,6 +118,23 @@
   float: left;
 }
 
+#battledome {
+    background-color: rgba(0, 63, 255, 0.61);
+    min-height: 700px;
+    margin: 1%;
+    padding: 3%;
+
+}
+
+#attackButton {
+    height: 100px;
+    width: 100px;
+    color: tomato;
+    border-radius: 75%;
+    background-color: #b31b00;
+    border: solid 5px;
+    font-weight: bold;
+}
 
 .battle-heading {
     margin: 1% 0;
@@ -140,20 +143,21 @@
 
 .healthBarShell {
     height: 50px;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, 0.36);
     border-radius: 12px;
     box-sizing: border-box;
     margin-top: 2%;
     padding: 10px 16px 0px 15px;
 }
 
-.healthBarValue {
-  width: 100%;
-  height: 30px;
-  background: rgba(255, 0, 0, .5);
-  border: solid 1px;
-  border-color: rgba(255, 255, 255, .7);
-  box-sizing: border-box;
-  margin: 0px;
-  position: relative;
+#player1Health,
+#player2Health {
+    height: 30px;
+    width: 100%;
+    background: white;
+    border: solid 1px #32ff0c;
+    border-radius: 2px;
+    box-sizing: border-box;
+    margin: 0px;
+    position: relative;
 }
