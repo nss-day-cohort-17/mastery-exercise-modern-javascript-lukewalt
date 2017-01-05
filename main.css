@@ -3,6 +3,7 @@ body {
 
 }
 
+
 #game-container {
   padding: .2%;
   text-align: center;
@@ -10,7 +11,7 @@ body {
 }
 
 #name-robot {
-    background-color: lightblue;
+    background-color: rgba(0, 63, 255, 0.61);
     min-height: 700px;
     margin: 1%;
 
@@ -18,9 +19,12 @@ body {
 
 .card,
 .card2 {
-    background-color: blue;
-    border: 1px solid darkblue;
+    background: rgba(0, 0, 0, 0.26);
+    border: 1px solid yellow;
+    border-radius: 3px;
     color: white;
+    padding: 5%;
+    margin-bottom: 2%;
 
 }
 
@@ -28,28 +32,52 @@ body {
 .title {
     font-size: 2em;
     font-weight: bold;
-    margin-bottom: 2%;
+    padding: 3%;
 }
 
 .field {
     width: 100%;
 }
 
-
-.select-bot {
-  text-decoration: none;
-  background-color: lightgreen;
-  color: black;
-  border-radius: 5px;
-  display: inline-block;
-  margin: 10px;
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: 600;
-  padding: 10px 5px;
-  min-width: 260px;
+.field__textinput {
+    height: 55px;
+    margin: 1% 0;
+    width: 351px;
+    font-size: 2em;
 }
 
+.field__textinput:focus {
+  border: 1px solid #04df04;
+}
+
+select {
+    float: none;
+    text-decoration: none;
+    background-color: lightgreen;
+    color: black;
+    border-radius: 5px;
+    border: 5px solid #04df04;
+    margin: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px 5px;
+    min-width: 260px;
+    height: 55px;
+}
+
+
+.ready {
+    float: none;
+    text-decoration: none;
+    background-color: #04df04;
+    color: black;
+    border-radius: 5px;
+    margin: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px 5px;
+    height: 55px;
+}
 .button {
     margin-top: 2%;
     padding: 2%;
@@ -57,12 +85,18 @@ body {
 }
 
 #enter-dome {
-  background-color: #FF4136;
-  border: 5px solid firebrick;
-  color: white;
-  text-align: center;
-  padding: 1% 5%;
+    background-color: #FF4136;
+    border: 5px solid firebrick;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 2% 5%;
+    min-width: 74%;
 
+}
+
+.enterButton {
+    margin: 3%;
 }
 
 
@@ -79,14 +113,10 @@ body {
     padding: 0;
 }
 
-
-/*#healthName1 {
-    align-content: left;
+.player-info {
+    text-align: center;
+    margin-bottom: 4%;
 }
-
-#healthName2 {
-    align-content: right;
-}*/
 
 .progress-sect {
     margin: 0;
@@ -129,6 +159,30 @@ body {
     padding: 14% 3% 7% 1%;
 }
 
+
+.hidden-class {
+    display: none;
+}
+
+.winner {
+    width: 75%;
+    position: absolute;
+    background-color: red;
+    margin: 3% 10%;
+    padding: 1em;
+    border: 10px solid yellow;
+    text-align: center;
+    color: yellow;
+    font-size: 5em;
+    top: 0;
+
+}
+
+#playAgain {
+    font-size: 12px;
+    color: yellow;
+    display: block;
+}
 /*.progress {
     height: 20px;
     margin: 2%;

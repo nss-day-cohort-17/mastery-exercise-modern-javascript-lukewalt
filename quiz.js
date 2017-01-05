@@ -90,16 +90,75 @@ $('document').ready(function(){
 });
 
 
+function checkHealth(player) {
+    if (player.healthBonus <= 0) {
+        $("#attack-button").attr("disabled", "true")
+        $("#playAgain").removeClass("hidden-class")
+        return false
+    }
+    return true
+}
+
+
 $('#attackButton').click(function(){
-    console.log("hey");
-    var p1Strength = combatant1.strengthBonus;
-    var p1Health = combatant1.healthBonus;
-    var p2Health = combatant2.healthBonus;
-    var p2Strength = combatant2.strengthBonus;
 
-    $('#player-two-healthCount').html(combatant2.healthBonus -= combatant1.strengthBonus)
+    var p1CurrentHealth = combatant1.healthBonus -= combatant2.strengthBonus;
+    var p2CurrentHealth = combatant2.healthBonus -= combatant1.strengthBonus;
+    checkHealth(combatant2)
+
+    if (checkHealth(combatant2)) {
+        $('#player-two-healthCount').html(p2CurrentHealth)
+        setTimeout(function() {
+            $('#player-one-healthCount').html(p1CurrentHealth)}, 1000)
+
+            if (!checkHealth(combatant1)) {
+                setTimeout(function(){
+                    $("#battledome").append(`<div class="winner"> ${combatant2.playerName} WINNER <a id="playAgain" href="http://localhost:8080/">
+                        <span>Play Again</span></a></div>`)
+                }, 1000)
+            }
+    } else {
+        setTimeout(function(){
+            $("#battledome").append(`<div class="winner"> ${combatant1.playerName} WINNER <a id="playAgain" href="http://localhost:8080/">
+                <span>Play Again</span></a></div>`)
+        }, 1000)
+    }
+
+});
 
 
+
+$("#attack-button").click(function(e){
+
+
+    attBtnAudio()
+    var player1AttDmg = warrior.weapon.attackDamage()
+    orc.health -= player1AttDmg
+    $(".player-one").html(`${warrior.playerName} attacked ${orc.playerName} for ${player1AttDmg}`)
+    $("#player2Health").attr("value", orc.health)
+    checkHealth(orc)
+
+    if (checkHealth(orc)) {
+
+          attBtnAudio()
+          var player2AttDmg = orc.weapon.attackDamage()
+          warrior.health -= player2AttDmg
+            $(".player-two").html(`${orc.playerName} attacked ${warrior.playerName} for ${orc.weapon.attackDamage()}`)
+            $("#player1Health").attr("value", warrior.health)
+
+           if (!checkHealth(warrior)) {
+                   $("body").append(`<div class="winner"> ${orc.playerName} WINNER</div>`)
+                   var audio6 = new Audio("https://0.s3.envato.com/files/218547150/preview.mp3")
+                   audio6.play();
+
+           }
+
+    } else {
+        $("body").append(`<div class="winner"> ${warrior.playerName} WINNER</div>`)
+        var audio7 = new Audio("https://0.s3.envato.com/files/218721944/preview.mp3")
+        audio7.play();
+
+    }
 })
 
 

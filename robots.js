@@ -19,7 +19,7 @@ Battledome.RobotGuild = {};
 
 Battledome.RobotGuild.BotClass = function() {
     this.healthBonus = 50;
-    this.strengthBonus = 50;
+    this.strengthBonus = 2;
     this.speed = 20;
 };
 
