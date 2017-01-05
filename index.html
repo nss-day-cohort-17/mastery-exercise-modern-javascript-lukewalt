@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Robot Battledome</title>
+        <link href="https://fonts.googleapis.com/css?family=Orbitron:400,900" rel="stylesheet">
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
         <link rel="stylesheet" href="main.css">
     </head>
@@ -86,37 +87,39 @@
             <!-- Battledome -->
             <section id="battledome" style="display: none">
 
-                <div class="row">
-                    <h2 class="battle-heading col-xs-12">WAR</h2>
+                <div class="row healthHead">
                 </div>
-
 
                 <!-- Progress Bar -->
                 <div class="row progress-sect">
 
-                    <div class="col-xs-4 healthBarShell">
+                    <div class="col-xs-2 healthBarShell">
 
-                        <!-- <progress id="player1Health" value="100" max="100"></progress> -->
-                        <div class="progress">
-                            <div id="player1Health" data-percentage="0%" style="width: 50%;" class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                        <!-- <div class="progress">
+                            <div id="player1Health" data-percentage="0%" class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div> -->
+
+                        <div class="healthCount"  id="player-one-healthCount">
+
                         </div>
 
                     </div>
 
                     <!-- Attack Button -->
-                    <div class="col-xs-4">
+                    <div class="col-xs-8">
                         <button type="button" id="attackButton">ATTACK</button>
                     </div>
 
-                    <div class="col-xs-4 healthBarShell">
+                    <div class="col-xs-2 healthBarShell">
 
-                        <div class="progress">
-                            <div id="player2Health" data-percentage="0%" style="width: 50%;" class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                        <!-- <div class="progress">
+                            <div id="player2Health" data-percentage="0%" class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div> -->
+                        <div class="healthCount" id="player-two-healthCount">
+
                         </div>
 
                     </div>
-
-
 
 
                 </div>

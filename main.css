@@ -1,3 +1,8 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+
+}
+
 #game-container {
   padding: .2%;
   text-align: center;
@@ -64,9 +69,27 @@
 #battledome {
     background-color: rgba(0, 63, 255, 0.61);
     min-height: 700px;
-    margin: 1%;
+    margin: -1%;
     padding: 3%;
 
+}
+
+.healthHead > h5 {
+    margin-top: 5%;
+    padding: 0;
+}
+
+
+/*#healthName1 {
+    align-content: left;
+}
+
+#healthName2 {
+    align-content: right;
+}*/
+
+.progress-sect {
+    margin: 0;
 }
 
 #attackButton {
@@ -88,11 +111,25 @@
     background: rgba(0, 0, 0, 0.36);
     border-radius: 12px;
     box-sizing: border-box;
-    margin-top: 2%;
+    padding: inherit;
 }
 
 
-.progress {
+
+
+
+.healthCount {
+    border: 2px solid #04df04;
+    height: 50%;
+    width: 63%;
+    background-color: white;
+    margin: 6% 19.5%;
+    font-weight: 900;
+    font-size: 46px;
+    padding: 14% 3% 7% 1%;
+}
+
+/*.progress {
     height: 20px;
     margin: 2%;
     overflow: hidden;
@@ -165,4 +202,5 @@
 .progress-bar-success {
     background-color: #1e810e;
     background-image: none;
-}
+    width: 100%;
+}*/
