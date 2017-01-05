@@ -80,7 +80,7 @@ $('document').ready(function(){
             $('#name-robot').hide();
             $('#battledome').removeAttr("style");
             $('.healthHead').append('<h5 class="col-xs-2" id="healthName1">' + combatant1.playerName + ' : ' + combatant1.name + '</h5>'
-                                    + '<h2 class="battle-heading col-xs-8">WAR</h2>'
+                                    + '<h1 class="battle-heading col-xs-8">WAR</h1>'
                                     + '<h5 class="col-xs-2" id="healthName2">' + combatant2.playerName + ' : ' + combatant2.name + '</h5>');
             $('#player-two-healthCount').append(combatant2.healthBonus)
         } else {
@@ -100,6 +100,8 @@ function checkHealth(player) {
 }
 
 
+// Provide a Attack! button that, when clicked, simply applies the damage output of each robot against the other one.
+// Once either robot's health is <0 display a message that the battle is over, and which one won. For example...
 $('#attackButton').click(function(){
 
     var p1CurrentHealth = combatant1.healthBonus -= combatant2.strengthBonus;
@@ -113,56 +115,15 @@ $('#attackButton').click(function(){
 
             if (!checkHealth(combatant1)) {
                 setTimeout(function(){
-                    $("#battledome").append(`<div class="winner"> ${combatant2.playerName} WINNER <a id="playAgain" href="http://localhost:8080/">
+                    $("#battledome").append(`<div class="winner"> ${combatant2.playerName} WINNER </div><br><a id="playAgain" href="http://localhost:8080/">
                         <span>Play Again</span></a></div>`)
                 }, 1000)
             }
     } else {
         setTimeout(function(){
-            $("#battledome").append(`<div class="winner"> ${combatant1.playerName} WINNER <a id="playAgain" href="http://localhost:8080/">
+            $("#battledome").append(`<div class="winner"> ${combatant2.playerName} WINNER </div><br><a id="playAgain" href="http://localhost:8080/">
                 <span>Play Again</span></a></div>`)
         }, 1000)
     }
 
 });
-
-
-
-$("#attack-button").click(function(e){
-
-
-    attBtnAudio()
-    var player1AttDmg = warrior.weapon.attackDamage()
-    orc.health -= player1AttDmg
-    $(".player-one").html(`${warrior.playerName} attacked ${orc.playerName} for ${player1AttDmg}`)
-    $("#player2Health").attr("value", orc.health)
-    checkHealth(orc)
-
-    if (checkHealth(orc)) {
-
-          attBtnAudio()
-          var player2AttDmg = orc.weapon.attackDamage()
-          warrior.health -= player2AttDmg
-            $(".player-two").html(`${orc.playerName} attacked ${warrior.playerName} for ${orc.weapon.attackDamage()}`)
-            $("#player1Health").attr("value", warrior.health)
-
-           if (!checkHealth(warrior)) {
-                   $("body").append(`<div class="winner"> ${orc.playerName} WINNER</div>`)
-                   var audio6 = new Audio("https://0.s3.envato.com/files/218547150/preview.mp3")
-                   audio6.play();
-
-           }
-
-    } else {
-        $("body").append(`<div class="winner"> ${warrior.playerName} WINNER</div>`)
-        var audio7 = new Audio("https://0.s3.envato.com/files/218721944/preview.mp3")
-        audio7.play();
-
-    }
-})
-
-
-
-
-// Provide a Attack! button that, when clicked, simply applies the damage output of each robot against the other one.
-// Once either robot's health is <0 display a message that the battle is over, and which one won. For example...
