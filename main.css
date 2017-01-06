@@ -1,0 +1,214 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    line-height: 0;
+
+}
+
+h5 {
+    font-weight: bold;
+}
+
+
+#game-container {
+  padding: .2%;
+  text-align: center;
+  display: block;
+}
+
+#name-robot {
+    background-color: rgba(0, 63, 255, 0.61);
+    min-height: 1000px;
+
+}
+
+.card,
+.card2 {
+    background: rgba(0, 0, 0, 0.26);
+    border: 1px solid yellow;
+    border-radius: 3px;
+    color: white;
+    padding: 5%;
+    margin-bottom: 2%;
+    line-height: 2;
+    letter-spacing: 1.4px
+
+}
+
+
+.title {
+    font-size: 2em;
+    font-weight: bold;
+    padding: 3%;
+    margin-top: 2%;
+}
+
+.field {
+    width: 100%;
+}
+
+.field__textinput {
+    height: 55px;
+    margin: 1% 0;
+    width: 351px;
+    font-size: 2em;
+}
+
+.field__textinput:focus {
+  border: 1px solid yellow;
+}
+
+select {
+    float: none;
+    text-decoration: none;
+    background-color: lightgreen;
+    color: black;
+    border-radius: 5px;
+    border: 5px solid #04df04;
+    margin: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px 5px;
+    min-width: 260px;
+    height: 55px;
+}
+
+
+.ready {
+    float: none;
+    text-decoration: none;
+    background-color: #04df04;
+    color: black;
+    border-radius: 5px;
+    margin: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px 5px;
+    height: 55px;
+}
+.button {
+    margin-top: 2%;
+    padding: 2%;
+    text-align: center;
+}
+
+#enter-dome {
+    background-color: #FF4136;
+    border: 5px solid firebrick;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 2% 5%;
+    min-width: 82%;
+
+}
+
+.enterButton {
+    margin: 3%;
+}
+
+
+#battledome {
+    background-color: rgba(0, 63, 255, 0.61);
+    min-height: 10000px;
+    margin: -1%;
+    padding: 1% 7%;
+    text-align: center;
+
+}
+
+.healthHead > h5 {
+    margin-top: 5%;
+    padding: 0;
+}
+
+.player-info {
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+.progress-sect {
+    margin: 0;
+    padding: 0 1%;
+}
+
+#attackButton {
+    height: 130px;
+    width: 130px;
+    color: tomato;
+    border-radius: 75%;
+    background-color: #b31b00;
+    border: solid 5px;
+    font-weight: bold;
+}
+
+.battle-heading {
+    margin: 2% 0;
+    font-weight: bold;
+
+}
+
+
+.healthBarShell {
+    background: rgba(0, 0, 0, 0.36);
+    border-radius: 12px;
+    box-sizing: border-box;
+    padding: inherit;
+}
+
+
+
+
+
+.healthCount {
+    border: 2px solid #04df04;
+    height: 50%;
+    width: 63%;
+    background-color: white;
+    margin: 6% 19.5%;
+    font-weight: 900;
+    font-size: 1.5em;
+    padding: 21% 3% 13% 1%;
+}
+
+
+.arena {
+    display: flex;
+    justify-content: space-between;
+}
+.robot-img {
+    text-align: center;
+}
+
+#p1-img {
+    height: 350px
+}
+
+#p2-img {
+    height: 350px
+
+}
+
+.hidden-class {
+    display: none;
+}
+
+.winner {
+    width: 80%;
+    min-height: 550px;
+    position: absolute;
+    background-color: red;
+    margin: 6% 4%;
+    padding: 2em;
+    border: 10px solid yellow;
+    text-align: center;
+    color: yellow;
+    font-size: 5em;
+    top: 0;
+
+}
+
+#playAgain {
+    font-size: 12px;
+    color: yellow;
+    display: block;
+}

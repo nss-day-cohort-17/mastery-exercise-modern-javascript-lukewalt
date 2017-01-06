@@ -2,12 +2,139 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Modern JavaScript Developer Quiz</title>
+        <title>Robot Battledome</title>
+        <link href="https://fonts.googleapis.com/css?family=Orbitron:400,900" rel="stylesheet">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
+        <article id="game-container">
 
+            <section id="name-robot" class="row">
+
+                <!-- TITLE -->
+                <div class="title col-xs-12">NAME ROBOT</div>
+
+                <!-- PLAYER 1 -->
+                <div id="playerOne" class="col-sm-6 robot-card player-info">
+                    <h4>Robot One</h4>
+                    <div class="field">
+                        <input type="text" autofocus="true" id="player-one-name" class="field__textinput">
+                    </div>
+                    <select class="p1-select-bot">
+                        <optgroup label="Drone">
+                            <option>Random</option>
+                            <option>GlobalHawk</option>
+                            <option>Neuron</option>
+                            <option>Hummingbird</option>
+                        </optgroup>
+                        <optgroup label="Bipedal">
+                            <option>Watson</option>
+                            <option>Flash</option>
+                            <option>Brutus</option>
+                        </optgroup>
+                        <optgroup label="Atv">
+                            <option>DuneBuggy</option>
+                            <option>Ninja</option>
+                            <option>GolfCart</option>
+                        </optgroup>
+                    </select>
+                    <button type="button" id="player-1-ready" class="ready">Ready</button>
+                </div>
+
+                <!-- player one select -->
+                <div class="col-sm-6 robot-card card" style="display: none"></div>
+
+
+                <!-- PLAYER 2 -->
+                <div id="playerTwo" class="col-sm-6 robot-card2 player-info">
+                    <h4>Robot Two</h4>
+                    <div class="field">
+                        <input type="text" autofocus="true" id="player-two-name" class="field__textinput">
+                    </div>
+                    <select class="p2-select-bot">
+                        <optgroup label="Drone">
+                            <option class="bot-type">Random</option>
+                            <option class="bot-type">GlobalHawk</option>
+                            <option class="bot-type">Neuron</option>
+                            <option class="bot-type">Hummingbird</option>
+                        </optgroup>
+                        <optgroup label="Bipedal">
+                            <option class="bot-type">Watson</option>
+                            <option class="bot-type">Flash</option>
+                            <option class="bot-type">Brutus</option>
+                        </optgroup>
+                        <optgroup label="Atv">
+                            <option class="bot-type">DuneBuggy</option>
+                            <option class="bot-type">Ninja</option>
+                            <option class="bot-type">GolfCart</option>
+                        </optgroup>
+                    </select>
+                    <button type="button" id="player-2-ready" class="ready">Ready</button>
+                </div>
+
+                <!-- player two select -->
+                <div class="col-sm-6 robot-card2 card2" style="display: none"></div>
+
+
+                <!-- LINK BUTTON -->
+                <div class="enterButton">
+                    <button id="enter-dome">Enter Battledome</button>
+                </div>
+
+            </section>
+
+            <!-- Battledome -->
+            <section id="battledome" style="display: none">
+
+                <div class="row healthHead">
+                </div>
+
+                <!-- Health Count -->
+                <div class="row progress-sect">
+
+                    <div class="col-xs-2 healthBarShell">
+
+                        <div class="healthCount"  id="player-one-healthCount">
+
+                        </div>
+
+                    </div>
+
+                    <!-- Attack Button -->
+                    <div class="col-xs-8">
+                        <button type="button" id="attackButton">ATTACK</button>
+                    </div>
+
+                    <div class="col-xs-2 healthBarShell">
+
+                        <div class="healthCount" id="player-two-healthCount">
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- imgs -->
+                <div class="arena">
+
+                    <div class="robot-img">
+                        <img id="p1-img" src="http://www.sideshowtoy.com/wp-content/uploads/2013/08/902058-product-silo.png" alt="robot1">
+
+                    </div>
+                    <div class="robot-img">
+                        <img id="p2-img" src="http://www.mattderody.com/wp-content/uploads/2014/05/robocop2.png" alt="robot2">
+
+                    </div>
+                </div>
+
+
+            </section>
+
+        </article>
     </body>
 
+    <script type="text/javascript" src="robots.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="quiz.js"></script>
 </html>
