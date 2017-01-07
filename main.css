@@ -208,7 +208,8 @@ select {
 }
 
 #playAgain {
-    font-size: 12px;
-    color: yellow;
+    color: rgb(0, 255, 169);
+    font-size: .5em;
+    margin: 13%;
     display: block;
 }

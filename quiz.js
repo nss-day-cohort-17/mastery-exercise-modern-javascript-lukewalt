@@ -115,13 +115,13 @@ $('#attackButton').click(function(){
 
             if (!checkHealth(combatant1)) {
                 setTimeout(function(){
-                    $("#battledome").append(`<div class="winner"> ${combatant2.playerName} WINNER </div><br><a id="playAgain" href="http://localhost:8080/">
+                    $("#battledome").append(`<div class="winner"> ${combatant2.playerName} WINNER <br><a id="playAgain" href="http://localhost:8080/">
                         <span>Play Again</span></a></div>`)
                 }, 1000)
             }
     } else {
         setTimeout(function(){
-            $("#battledome").append(`<div class="winner"> ${combatant2.playerName} WINNER </div><br><a id="playAgain" href="http://localhost:8080/">
+            $("#battledome").append(`<div class="winner"> ${combatant1.playerName} WINNER <br><a id="playAgain" href="http://localhost:8080/">
                 <span>Play Again</span></a></div>`)
         }, 1000)
     }
